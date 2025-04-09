@@ -38,7 +38,7 @@ export const protect = async (req: AuthRequest, res: Response, next: NextFunctio
       next();
     } catch (error) {
       console.error(error);
-      res.status(401).json({ message: 'Não autorizado, token inválido' });
+      res.status(401).json({ message: 'Não autorizado, token expirado ou inválido' });
       return;
     }
   }

@@ -26,5 +26,8 @@
     "create:admin": "ts-node src/scripts/createAdminUser.ts",
     "create:test-users": "ts-node src/scripts/createTestUsers.ts",
     "setup": "npm run create:admin && npm run create:test-users"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10"
   }
 }
