@@ -4,16 +4,11 @@ import { verifyWebhookToken } from '../middlewares/webhookAuthMiddleware';
 
 const router = express.Router();
 
-// Aplicar middleware de autenticação a todas as rotas de webhook
-router.use(verifyWebhookToken as express.RequestHandler);
+// Rota para processar webhook genérico de venda (com autenticação)
+router.post('/sale', verifyWebhookToken as express.RequestHandler, processSaleWebhook);
 
-// Rota para processar webhook genérico de venda
-router.post('/sale', processSaleWebhook);
-
-// Rota para processar webhook da Shopify
+// Rotas para processar webhooks de plataformas (sem verificação de token)
 router.post('/shopify', processShopifyWebhook);
-
-// Rota para processar webhook da CartPanda
 router.post('/cartpanda', processCartPandaWebhook);
 
 export default router; 
