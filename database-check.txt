@@ -1,0 +1,86 @@
+MongoDB Connected
+Verificando usuários...
+[
+  {
+    "_id": "67f5a1907ea2c6d0cfd11962",
+    "name": "Antonio Duarte",
+    "email": "admin@example.com",
+    "role": "admin"
+  },
+  {
+    "_id": "67f5ab005a89dfec24ce58cd",
+    "name": "Gerente Teste",
+    "email": "gerente@example.com",
+    "role": "manager"
+  },
+  {
+    "_id": "67f5ab005a89dfec24ce58d0",
+    "name": "Influencer Teste",
+    "email": "influencer@example.com",
+    "role": "influencer"
+  },
+  {
+    "_id": "67f5b481cadc0efaecfe7641",
+    "name": "antonio duarte 2",
+    "email": "antonioolucass@gmail.com",
+    "role": "manager"
+  },
+  {
+    "_id": "67f5e4aec4522cabf8f9f5c2",
+    "name": "antonio duarte",
+    "email": "antonio@notifiquei.com.br",
+    "role": "influencer"
+  }
+]
+
+Verificando vendas...
+[
+  {
+    "_id": "67f56a63cd952d7918d19239",
+    "influencer": "67f56a4420fc2904805a56e5",
+    "manager": "67f56a4420fc2904805a56e2",
+    "orderId": "TEST-1744136802948",
+    "saleValue": 150,
+    "commissionCalculated": true,
+    "influencerCommissionEarned": 15,
+    "managerCommissionEarned": 3,
+    "couponCodeUsed": "TESTE10",
+    "transactionDate": "2025-04-08T18:26:42.948Z",
+    "processedViaWebhook": true,
+    "createdAt": "2025-04-08T18:26:43.247Z",
+    "updatedAt": "2025-04-08T18:26:43.247Z",
+    "__v": 0
+  },
+  {
+    "_id": "67f5e598c4522cabf8f9f5cb",
+    "influencer": "67f5e4aec4522cabf8f9f5c2",
+    "manager": "67f5b481cadc0efaecfe7641",
+    "orderId": "SIM-1744168344488",
+    "saleValue": 250,
+    "commissionCalculated": true,
+    "influencerCommissionEarned": 25,
+    "managerCommissionEarned": 5,
+    "couponCodeUsed": "antonio10",
+    "transactionDate": "2025-04-09T03:12:24.488Z",
+    "processedViaWebhook": true,
+    "createdAt": "2025-04-09T03:12:24.961Z",
+    "updatedAt": "2025-04-09T03:12:24.961Z",
+    "__v": 0
+  },
+  {
+    "_id": "67f5e5d3c4522cabf8f9f5d4",
+    "influencer": "67f5e4aec4522cabf8f9f5c2",
+    "manager": "67f5b481cadc0efaecfe7641",
+    "orderId": "SIM-1744168403041",
+    "saleValue": 250,
+    "commissionCalculated": true,
+    "influencerCommissionEarned": 25,
+    "managerCommissionEarned": 5,
+    "couponCodeUsed": "antonio10",
+    "transactionDate": "2025-04-09T03:13:23.041Z",
+    "processedViaWebhook": true,
+    "createdAt": "2025-04-09T03:13:23.492Z",
+    "updatedAt": "2025-04-09T03:13:23.492Z",
+    "__v": 0
+  }
+]
