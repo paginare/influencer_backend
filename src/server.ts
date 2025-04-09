@@ -21,7 +21,10 @@ dotenv.config();
 connectDB(); // Connect to MongoDB
 
 const app: Express = express();
-const port = process.env.PORT || 3001; // Default to 3001 if PORT not set in .env
+// Forçando a porta 3000 para compatibilidade com o fly.io
+const PORT: number = process.env.PORT ? parseInt(process.env.PORT) : 3000; 
+// Forçando o host para 0.0.0.0 para ser acessível pelo fly-proxy
+const HOST: string = '0.0.0.0';
 
 // Middleware para CORS e parsing do body
 app.use(cors());
@@ -98,8 +101,10 @@ app.post('/api/test-disconnect', (req, res) => {
 // app.use(notFound);
 // app.use(errorHandler);
 
-app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
+// Configurando o servidor para escutar em 0.0.0.0:3000 para compatibilidade com fly.io
+app.listen(PORT, HOST, () => {
+  console.log(`[server]: Server is running at http://${HOST}:${PORT}`);
+  console.log(`[server]: Para acessar localmente use http://localhost:${PORT}`);
 });
 
 export default app; // Export for potential testing 
